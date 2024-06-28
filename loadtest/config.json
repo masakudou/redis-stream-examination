@@ -1,0 +1,18 @@
+{
+  "name": "gRPC Streaming Load Test",
+  "proto": "chat.proto",
+  "call": "chat.ChatService.ReceiveStream",
+  "host": "localhost:50051",
+  "total": 10000,
+  "insecure": true,
+  "load-schedule": "const",
+  "concurrency-schedule": "line",
+  "concurrency-start": 200,
+  "concurrency-step": 50,
+  "concurrency-max-duration": "240s",
+  "stream-call-duration": "240s",
+  "timeout": 0,
+  "count-errors": true,
+  "format": "html",
+  "output": "report.html"
+}
